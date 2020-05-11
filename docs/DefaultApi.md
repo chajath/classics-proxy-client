@@ -16,6 +16,8 @@ Method | HTTP request | Description
 
 
 
+Recursively list all text nodes under the given `dataId`
+
 ### Example
 
 ```python
@@ -29,8 +31,8 @@ from pprint import pprint
 with classics_proxy_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = classics_proxy_client.DefaultApi(api_client)
-    series_id = 'series_id_example' # str | 
-data_id = 'data_id_example' # str | 
+    series_id = 'series_id_example' # str | Id of the corpora from `/corpora/itkc`
+data_id = 'data_id_example' # str | Id for the node as given in the `data_id` field
 
     try:
         api_response = api_instance.itkc_all_text_meta(series_id, data_id)
@@ -43,8 +45,8 @@ data_id = 'data_id_example' # str |
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **series_id** | **str**|  | 
- **data_id** | **str**|  | 
+ **series_id** | **str**| Id of the corpora from &#x60;/corpora/itkc&#x60; | 
+ **data_id** | **str**| Id for the node as given in the &#x60;data_id&#x60; field | 
 
 ### Return type
 
@@ -70,6 +72,8 @@ No authorization required
 > InlineResponse200 itkc_corpora()
 
 
+
+List all supported itkc corpora
 
 ### Example
 
@@ -120,6 +124,8 @@ No authorization required
 
 
 
+List subsections and articles belonging to the given `dataId`.
+
 ### Example
 
 ```python
@@ -133,8 +139,8 @@ from pprint import pprint
 with classics_proxy_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = classics_proxy_client.DefaultApi(api_client)
-    series_id = 'series_id_example' # str | 
-data_id = 'data_id_example' # str | 
+    series_id = 'series_id_example' # str | Id of the corpora from `/corpora/itkc`
+data_id = 'data_id_example' # str | Id for the node as given in the `data_id` field
 
     try:
         api_response = api_instance.itkc_meta(series_id, data_id)
@@ -147,8 +153,8 @@ data_id = 'data_id_example' # str |
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **series_id** | **str**|  | 
- **data_id** | **str**|  | 
+ **series_id** | **str**| Id of the corpora from &#x60;/corpora/itkc&#x60; | 
+ **data_id** | **str**| Id for the node as given in the &#x60;data_id&#x60; field | 
 
 ### Return type
 
@@ -175,6 +181,8 @@ No authorization required
 
 
 
+List all volumns for the corpus
+
 ### Example
 
 ```python
@@ -188,7 +196,7 @@ from pprint import pprint
 with classics_proxy_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = classics_proxy_client.DefaultApi(api_client)
-    series_id = 'series_id_example' # str | 
+    series_id = 'series_id_example' # str | Id of the corpora from `/corpora/itkc`
 
     try:
         api_response = api_instance.itkc_series(series_id)
@@ -201,7 +209,7 @@ with classics_proxy_client.ApiClient() as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **series_id** | **str**|  | 
+ **series_id** | **str**| Id of the corpora from &#x60;/corpora/itkc&#x60; | 
 
 ### Return type
 
@@ -228,6 +236,8 @@ No authorization required
 
 
 
+Get the text content
+
 ### Example
 
 ```python
@@ -241,8 +251,8 @@ from pprint import pprint
 with classics_proxy_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = classics_proxy_client.DefaultApi(api_client)
-    series_id = 'series_id_example' # str | 
-data_id = 'data_id_example' # str | 
+    series_id = 'series_id_example' # str | Id of the corpora from `/corpora/itkc`
+data_id = 'data_id_example' # str | Id for the node as given in the `data_id` field
 
     try:
         api_response = api_instance.itkc_text(series_id, data_id)
@@ -255,8 +265,8 @@ data_id = 'data_id_example' # str |
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **series_id** | **str**|  | 
- **data_id** | **str**|  | 
+ **series_id** | **str**| Id of the corpora from &#x60;/corpora/itkc&#x60; | 
+ **data_id** | **str**| Id for the node as given in the &#x60;data_id&#x60; field | 
 
 ### Return type
 
